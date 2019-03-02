@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <style>
+                        @font-face {
+                            font-family: Badr;
+                            src: url("font/B Badr Bold.ttf");
+                        }
+                        @font-face {
+                            font-family: Baran;
+                            src: url("font/B Baran.ttf");
+                        }
+                        @font-face {
+                            font-family: Elham;
+                            src: url("font/B Elham.ttf");
+                        }
+            
+                        @font-face {
+                            font-family: Homa;
+                            src: url("font/B Homa.ttf");
+                        }
+                        @font-face {
+                            font-family: Kamran;
+                            src: url("font/B Kamran.ttf");
+                        }
+                        @font-face {
+                            font-family: Titr;
+                            src: url("font/B Titr Bold.ttf");
+                        }
+                        @font-face {
+                            font-family: Yekan;
+                            src: url("font/B Yekan.ttf");
+                        }
+                        @font-face {
+                            font-family: Zar;
+                            src: url("font/B Zar.ttf");
+                        }
+            
+            
+            
+            
+            
+                        html 
+                        {
+                            height:100%;
+                        }
+                        body 
+                        {
+                            height:100%; 
+                            margin:0; 
+                            padding:0;       
+                        }
+                        #bg {
+                            position:fixed; 
+                            top:0; 
+                            left:0; 
+                            width:100%; 
+                            height:100%;
+                        }
+                        #context {
+                            position:relative; 
+                            z-index:1;
+            
+            
+                        }
+                        .title
+                        {
+                            text-align: center;
+                            color: blue;
+                            font-size: 18pt;
+                        }
+                        .topic
+                        {
+                            text-align: justify;
+                            text-justify: inter-word;
+                            margin-right: 10px;
+                            margin-left: 10px;
+                            font-family: Tahoma;
+                            color:#36383e;
+                            font-size: 12pt;
+                        }
+            
+                        .doa{
+                            text-align: justify;
+                            margin-right: 10px;
+                            margin-left: 10px;
+                            font-family: Tahoma;
+                            border-radius: 14px;
+                            border-style: solid;
+                            padding: 5px;
+                            line-height: 1.8;
+                        }
+            
+                        .titr
+                        {
+                            margin-right: 10px;
+                            font-family:Tahoma;
+                            font-size: 15pt;
+                            color: #0026ff;
+                        }
+                        .buttons
+                        {
+                            border-radius: 10px;
+                            border-style: solid;
+                            background-color: #0af;
+                            text-align: center;
+                            left: 0px;right: 0px;
+                            position: fixed
+                        }
+                        select
+                        {
+                            text-align: center;
+                            appearance:none;
+                            -moz-appearance:none; /* Firefox */
+                            -webkit-appearance:none; /* Safari and Chrome */
+                        }
+        </style>
+        <script>
+            var color;
+            var size;
+            function changefont() {
+                var x = document.getElementById("font").value;
+                var el = document.getElementsByClassName("topic");
+                var i;
+                for (i = 0; i < el.length; i++) {
+                    el[i].setAttribute("style", "font-family: " + x + ";");
+                }
+            }
+            function changesize() {
+                size = document.getElementById("size").value;
+                var el = document.getElementsByClassName("topic");
+                var i;
+                for (i = 0; i < el.length; i++) {
+                    el[i].style.fontSize = size+"pt";
+                  //  el[i].setAttribute("style", "font-size: " + size + "px;");
+                }
+            }
+            function changecolor() {
+                color = document.getElementById("color").value;
+                var el = document.getElementsByClassName("topic");
+                var i;
+                for (i = 0; i < el.length; i++) {
+                    el[i].style.color = color;
+                    //  el[i].setAttribute("style", "color: " + x + ";");
+                }
+            }
+        </script>
+    </head>
+    <body dir="rtl">
+        <div id="bg">
+            <img alt="" src="../IMG/b2.jpg" width="100%" height="100%">
+        </div>
+
+        <div id="context">
+            <div class="buttons">
+
+                <select id="font" style="display: none" onchange="changefont()">
+                    <option value="Yekan">Yekan</option>
+                    <option value="Titr">Titr</option>
+                    <option value="Homa">Homa</option>
+                    <option value="Elham">Elham</option>
+                    <option value="Badr">Badr</option>
+                    <option value="Baran">Baran</option>
+                    <option value="Kamran">Kamran</option>
+                    <option value="Zar">Zar</option>
+                </select>
+                سایز متن:
+                <select id="size" onchange="changesize()">
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12" selected>12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                </select>
+
+                رنگ متن:
+                <select id="color" onchange="changecolor()">
+                    <option value="black">مشکی</option>
+                    <option value="red">قرمز</option>
+                    <option value="green">سبز</option>
+                    <option value="blue">آبی</option>
+                    <option value="orange">نارنجی</option>
+                    <option value="white">سفید</option>
+
+                </select>
+            </div>
+            <br />
+            <br />
+            <div>
+                <div class="title">
+                روزه‌هاى مستحب
+                </div>
+                
+                <div class="topic">
+                    
+                     <ul>
+                         <li>
+                             روزه تمام روزهاى سال غير از روزه‌هاى حرام و مكروه كه گفته شد مستحب است و براى بعضى از روزها بيشتر سفارش شده است كه از آن جمله است
+
+                             <ol>
+                                <li>پنجشنبه اول و پنجشنبه آخر هر ماه، و چهارشنبه اولى كه بعد از روز دهم ماه است و اگر كسى اينها را بجا نياورد مستحب است قضا نمايد و چنانچه اصلا نتواند روزه بگيرد مستحب است براى هر روز يك مد طعام يا 6/12 نخود نقره به فقير بدهد.</li>
+                                <li>سيزدهم و چهاردهم و پانزدهم هر ماه.</li>
+                                <li>تمام ماه رجب و شعبان و بعضى از اين دو ماه اگر چه يك روز باشد.</li>
+                                <li>روز عيد نوروز، روز بيست و پنجم و بيست و نهم ذی‌قعده، روز اول تا روز نهم ذی‌حجه، روز عرفه ولى اگر بواسطه ضعف روزه، نتواند دعاهاى روز عرفه را بخواند، روزه آن روز مكروه است، عيد سعيد غدير،18 ذی‌حجه، روز اول و سوم محرم، ميلاد مسعود پيغمبر اكرم صلى الله عليه و آله و سلم، 17 ربيع الاول روز مبعث ‏حضرت رسول اكرم صلى الله عليه و آله و سلم، 27 رجب و اگر كسى روزه مستحبى بگيرد واجب نيست آن را به آخر برساند بلكه اگر برادر مؤمنش او را به غذا دعوت كند، مستحب است دعوت او را قبول كند و در بين روز افطار نمايد.</li>
+                            </ol>
+                         </li>
+                     </ul>
+                    
+
+                </div>
+            </div>
+
+
+        </div>
+    </body>
+</html>

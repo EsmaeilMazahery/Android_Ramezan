@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <style>
+                        @font-face {
+                            font-family: Badr;
+                            src: url("font/B Badr Bold.ttf");
+                        }
+                        @font-face {
+                            font-family: Baran;
+                            src: url("font/B Baran.ttf");
+                        }
+                        @font-face {
+                            font-family: Elham;
+                            src: url("font/B Elham.ttf");
+                        }
+            
+                        @font-face {
+                            font-family: Homa;
+                            src: url("font/B Homa.ttf");
+                        }
+                        @font-face {
+                            font-family: Kamran;
+                            src: url("font/B Kamran.ttf");
+                        }
+                        @font-face {
+                            font-family: Titr;
+                            src: url("font/B Titr Bold.ttf");
+                        }
+                        @font-face {
+                            font-family: Yekan;
+                            src: url("font/B Yekan.ttf");
+                        }
+                        @font-face {
+                            font-family: Zar;
+                            src: url("font/B Zar.ttf");
+                        }
+            
+            
+            
+            
+            
+                        html 
+                        {
+                            height:100%;
+                        }
+                        body 
+                        {
+                            height:100%; 
+                            margin:0; 
+                            padding:0;       
+                        }
+                        #bg {
+                            position:fixed; 
+                            top:0; 
+                            left:0; 
+                            width:100%; 
+                            height:100%;
+                        }
+                        #context {
+                            position:relative; 
+                            z-index:1;
+            
+            
+                        }
+                        .title
+                        {
+                            text-align: center;
+                            color: blue;
+                            font-size: 18pt;
+                        }
+                        .topic
+                        {
+                            text-align: justify;
+                            text-justify: inter-word;
+                            margin-left: 10px;
+                            font-family: Tahoma;
+                            color:#36383e;
+                            font-size: 12pt;
+                        }
+            
+                        .doa{
+                            text-align: justify;
+                            margin-right: 10px;
+                            margin-left: 10px;
+                            font-family: Tahoma;
+                            border-radius: 14px;
+                            border-style: solid;
+                            padding: 5px;
+                            line-height: 1.8;
+                        }
+            
+                        .titr
+                        {
+                            margin-right: 10px;
+                            font-family:Tahoma;
+                            font-size: 15pt;
+                            color: #0026ff;
+                        }
+                        .buttons
+                        {
+                            border-radius: 10px;
+                            border-style: solid;
+                            background-color: #0af;
+                            text-align: center;
+                            left: 0px;right: 0px;
+                            position: fixed
+                        }
+                        select
+                        {
+                            text-align: center;
+                            appearance:none;
+                            -moz-appearance:none; /* Firefox */
+                            -webkit-appearance:none; /* Safari and Chrome */
+                        }
+        </style>
+        <script>
+            var color;
+            var size;
+            function changefont() {
+                var x = document.getElementById("font").value;
+                var el = document.getElementsByClassName("topic");
+                var i;
+                for (i = 0; i < el.length; i++) {
+                    el[i].setAttribute("style", "font-family: " + x + ";");
+                }
+            }
+            function changesize() {
+                size = document.getElementById("size").value;
+                var el = document.getElementsByClassName("topic");
+                var i;
+                for (i = 0; i < el.length; i++) {
+                    el[i].style.fontSize = size+"pt";
+                  //  el[i].setAttribute("style", "font-size: " + size + "px;");
+                }
+            }
+            function changecolor() {
+                color = document.getElementById("color").value;
+                var el = document.getElementsByClassName("topic");
+                var i;
+                for (i = 0; i < el.length; i++) {
+                    el[i].style.color = color;
+                    //  el[i].setAttribute("style", "color: " + x + ";");
+                }
+            }
+        </script>
+    </head>
+    <body dir="rtl">
+        <div id="bg">
+            <img alt="" src="../IMG/b2.jpg" width="100%" height="100%">
+        </div>
+
+        <div id="context">
+            <div class="buttons">
+
+                <select id="font" style="display: none" onchange="changefont()">
+                    <option value="Yekan">Yekan</option>
+                    <option value="Titr">Titr</option>
+                    <option value="Homa">Homa</option>
+                    <option value="Elham">Elham</option>
+                    <option value="Badr">Badr</option>
+                    <option value="Baran">Baran</option>
+                    <option value="Kamran">Kamran</option>
+                    <option value="Zar">Zar</option>
+                </select>
+                سایز متن:
+                <select id="size" onchange="changesize()">
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12" selected>12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                </select>
+
+                رنگ متن:
+                <select id="color" onchange="changecolor()">
+                    <option value="black">مشکی</option>
+                    <option value="red">قرمز</option>
+                    <option value="green">سبز</option>
+                    <option value="blue">آبی</option>
+                    <option value="orange">نارنجی</option>
+                    <option value="white">سفید</option>
+
+                </select>
+            </div>
+            <br />
+            <br />
+            <div>
+                <div class="title">
+                جاهايى كه فقط قضاى روزه واجب است
+                </div>
+                
+                <div class="topic">
+                    
+                     <ul>
+                         <li>
+                         در چند صورت فقط قضاى روزه بر انسان واجب است و كفاره واجب نيست
+
+                            <ol>
+                                <li>آنكه روزه‌دار در روز ماه رمضان عمدا قى كند.</li>
+                                <li> آنكه در شب ماه رمضان جنب باشد و به تفصيلى كه در بالا گفته شد تا اذان صبح از خواب سوم بيدار نشود.</li>
+                                <li>عملى كه روزه را باطل مى كند بجا نياورد، ولى نيت روزه نكند يا ريا كند يا قصد كند كه روزه نباشد.</li>
+                                <li> آنكه در ماه رمضان غسل جنابت را فراموش كند و با حال جنابت يك روز يا چند روز روزه بگيرد.</li>
+                                <li> آنكه در ماه رمضان بدون اين كه تحقيق كند صبح شده يا نه، كارى كه روزه را باطل مى كند انجام دهد، بعد معلوم شود صبح بوده و نيز اگر بعد از تحقيق با اين كه گمان دارد صبح شده، كارى كه روزه را باطل مى كند انجام دهد بعد معلوم شود صبح بوده قضاى آن روزه بر او واجب است. ولى اگر بعد از تحقيق گمان يا يقين كند كه صبح شده و چيزى بخورد، و بعد معلوم شود صبح بوده، قضا واجب نيست، بلكه اگر بعد از تحقيق شك كند كه صبح شده يا نه و كارى كه روزه را باطل می‌كند انجام دهد بعد معلوم شود صبح بوده، قضا واجب نيست.</li>
+                                <li> آنكه كسى بگويد صبح نشده و انسان به گفته او كارى كه روزه را باطل می‌كند انجام هد، بعد معلوم شود صبح بوده است.</li>
+                                <li> آنكه كسى بگويد صبح شده و انسان به گفته او يقين نكند، يا خيال كند شوخى می‌كند و كارى كه روزه را باطل می‌كند انجام دهد، بعد معلوم شود صبح بوده است.</li>
+                                <li> آنكه به گفته كس ديگر كه عادل باشد افطار كند، بعد معلوم شود مغرب نبوده است.</li>
+                                <li> آنكه در هواى صاف به واسطه تاريكى يقين كند كه مغرب شده و افطار كند، بعد معلوم شود مغرب نبوده است ولى اگر در هواى ابر به گمان اين كه مغرب شده افطار كند، بعد معلوم شود مغرب نبوده، قضا لازم نيست.</li>
+                                <li> آنكه براى خنك شدن يا بى جهت مضمضه كند، يعنى آب در دهان بگرداند و بی‌اختيار فرو رود، ولى اگر فراموش كند كه روزه است و آب را فرو دهد، يا براى وضو مضمضه كند و بی‌اختيار فرو رود، قضا بر او واجب نيست.</li>
+                                
+                            </ol>
+                         </li>
+                         <li>اگر غير آب چيز ديگرى را در دهان ببرد و بی‌اختيار فرو رود، يا آب داخل بينى كند و بی‌اختيار فرو رود، قضا بر او واجب نيست.</li>
+                         <li>مضمضه زياد براى روزه‏دار مكروه است، و اگر بعد از مضمضه بخواهد آب دهان را فرو برد، بهتر است‏سه مرتبه آب دهان را بيرون بريزد.</li>
+                         <li>اگر انسان بداند كه به واسطه مضمضه، بی‌اختيار يا از روى فراموشى آب وارد گلويش می‌شود، نبايد مضمضه كند.</li>
+                         <li>اگر در ماه رمضان بعد از تحقيق يقين كند كه صبح نشده و كارى كه روزه را باطل می‌كند انجام دهد، بعد معلوم شود صبح بوده، قضا لازم نيست.</li>
+                         <li>	اگر انسان شك كند كه مغرب شده يا نه، نمی‌تواند افطار كند، ولى اگر شك كند كه صبح شده يا نه، پيش از تحقيق هم می‌تواند كارى كه روزه را باطل می‌كند انجام دهد.</li>
+                     </ul>
+                    
+
+                </div>
+            </div>
+
+
+        </div>
+    </body>
+</html>

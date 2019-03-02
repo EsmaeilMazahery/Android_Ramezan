@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <style>
+                        @font-face {
+                            font-family: Badr;
+                            src: url("font/B Badr Bold.ttf");
+                        }
+                        @font-face {
+                            font-family: Baran;
+                            src: url("font/B Baran.ttf");
+                        }
+                        @font-face {
+                            font-family: Elham;
+                            src: url("font/B Elham.ttf");
+                        }
+            
+                        @font-face {
+                            font-family: Homa;
+                            src: url("font/B Homa.ttf");
+                        }
+                        @font-face {
+                            font-family: Kamran;
+                            src: url("font/B Kamran.ttf");
+                        }
+                        @font-face {
+                            font-family: Titr;
+                            src: url("font/B Titr Bold.ttf");
+                        }
+                        @font-face {
+                            font-family: Yekan;
+                            src: url("font/B Yekan.ttf");
+                        }
+                        @font-face {
+                            font-family: Zar;
+                            src: url("font/B Zar.ttf");
+                        }
+            
+            
+            
+            
+            
+                        html 
+                        {
+                            height:100%;
+                        }
+                        body 
+                        {
+                            height:100%; 
+                            margin:0; 
+                            padding:0;       
+                        }
+                        #bg {
+                            position:fixed; 
+                            top:0; 
+                            left:0; 
+                            width:100%; 
+                            height:100%;
+                        }
+                        #context {
+                            position:relative; 
+                            z-index:1;
+            
+            
+                        }
+                        .title
+                        {
+                            text-align: center;
+                            color: blue;
+                            font-size: 18pt;
+                        }
+                        .topic
+                        {
+                            text-align: justify;
+                            text-justify: inter-word;
+                            margin-right: 10px;
+                            margin-left: 10px;
+                            font-family: Tahoma;
+                            color:#36383e;
+                            font-size: 12pt;
+                        }
+            
+                        .doa{
+                            text-align: justify;
+                            margin-right: 10px;
+                            margin-left: 10px;
+                            font-family: Tahoma;
+                            border-radius: 14px;
+                            border-style: solid;
+                            padding: 5px;
+                            line-height: 1.8;
+                        }
+            
+                        .titr
+                        {
+                            margin-right: 10px;
+                            font-family:Tahoma;
+                            font-size: 15pt;
+                            color: #0026ff;
+                        }
+                        .buttons
+                        {
+                            border-radius: 10px;
+                            border-style: solid;
+                            background-color: #0af;
+                            text-align: center;
+                            left: 0px;right: 0px;
+                            position: fixed
+                        }
+                        select
+                        {
+                            text-align: center;
+                            appearance:none;
+                            -moz-appearance:none; /* Firefox */
+                            -webkit-appearance:none; /* Safari and Chrome */
+                        }
+        </style>
+        <script>
+            var color;
+            var size;
+            function changefont() {
+                var x = document.getElementById("font").value;
+                var el = document.getElementsByClassName("topic");
+                var i;
+                for (i = 0; i < el.length; i++) {
+                    el[i].setAttribute("style", "font-family: " + x + ";");
+                }
+            }
+            function changesize() {
+                size = document.getElementById("size").value;
+                var el = document.getElementsByClassName("topic");
+                var i;
+                for (i = 0; i < el.length; i++) {
+                    el[i].style.fontSize = size+"pt";
+                  //  el[i].setAttribute("style", "font-size: " + size + "px;");
+                }
+            }
+            function changecolor() {
+                color = document.getElementById("color").value;
+                var el = document.getElementsByClassName("topic");
+                var i;
+                for (i = 0; i < el.length; i++) {
+                    el[i].style.color = color;
+                    //  el[i].setAttribute("style", "color: " + x + ";");
+                }
+            }
+        </script>
+    </head>
+    <body dir="rtl">
+        <div id="bg">
+            <img alt="" src="../IMG/b2.jpg" width="100%" height="100%">
+        </div>
+
+        <div id="context">
+            <div class="buttons">
+
+                <select id="font" style="display: none" onchange="changefont()">
+                    <option value="Yekan">Yekan</option>
+                    <option value="Titr">Titr</option>
+                    <option value="Homa">Homa</option>
+                    <option value="Elham">Elham</option>
+                    <option value="Badr">Badr</option>
+                    <option value="Baran">Baran</option>
+                    <option value="Kamran">Kamran</option>
+                    <option value="Zar">Zar</option>
+                </select>
+                سایز متن:
+                <select id="size" onchange="changesize()">
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12" selected>12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                </select>
+
+                رنگ متن:
+                <select id="color" onchange="changecolor()">
+                    <option value="black">مشکی</option>
+                    <option value="red">قرمز</option>
+                    <option value="green">سبز</option>
+                    <option value="blue">آبی</option>
+                    <option value="orange">نارنجی</option>
+                    <option value="white">سفید</option>
+
+                </select>
+            </div>
+            <br />
+            <br />
+            <div>
+                <div class="title">
+                احكام روزه مسافر
+                </div>
+                
+                <div class="topic">
+                    
+                     <ul>
+                        <li>مسافرى كه بايد نمازهاى چهار ركعتى را در سفر دو ركعت بخواند، نبايد روزه بگيرد و مسافرى كه نمازش را تمام می‌خواند، مثل كسى كه شغلش مسافرت يا سفر او سفر معصيت است، بايد در سفر روزه بگيرد.</li>
+                         <li>	مسافرت در ماه رمضان اشكال ندارد، ولى اگر براى فرار از روزه باشد، مكروه است.</li>
+                         <li>	اگر غير روزه رمضان روزه معين ديگرى بر انسان واجب باشد، بنابراحتياط واجب نبايد در آن روز مسافرت كند و اگر در سفر باشد، بايد قصد كند كه ده روز در جايى بماند و آن روز را روزه بگيرد، ولى اگر نذر كرده باشد روز معينى را روزه بگيرد، می‌تواند در آن روز مسافرت نمايد.</li>
+                         <li>	اگر نذر كند روزه بگيرد و روز آن را معين نكند، نمی‌تواند آن را در سفر بجا آورد ولى چنانچه نذر كند كه روز معينى را در سفر روزه بگيرد، بايد آن را در سفر بجا آورد و نيز اگر نذر كند روز معينى را چه مسافر باشد يا نباشد روزه بگيرد، بايد آن روز را اگرچه مسافر باشد روزه بگيرد.</li>
+                         <li>مسافر می‌تواند براى خواستن حاجت، سه روز در مدينه طيبه روزه مستحبى بگيرد.</li>
+                         <li>كسى كه نمی‌داند روزه مسافر باطل است، اگر در سفر روزه بگيرد و در بين روز مساله را بفهمد، روزه‏اش باطل می‌شود و اگر تا مغرب نفهمد، روزه‏اش صحيح است.</li>
+                         <li>	اگر فراموش كند كه مسافر است يا فراموش كند كه روزه مسافر باطل می‌باشد و در سفر روزه بگيرد، روزه او باطل است.</li>
+                         <li>اگر روزه‏دار بعد از ظهر مسافرت نمايد، بايد روزه خود را تمام كند، و اگر پيش از ظهر مسافرت كند، وقتى به حد ترخص برسد، يعنى به جايى برسد كه ديوار شهر را نبيند و صداى اذان آن را نشنود، بايد روزه خود را باطل كند و اگر پيش از آن روزه را باطل كند، بنابر احتياط كفاره نيز بر او واجب است.</li>
+                         <li>	اگر مسافر پيش از ظهر به وطنش برسد، يا به جايى برسد كه می‌خواهد ده روز در آن جا بماند، چنانچه كارى كه روزه را باطل می‌كند انجام نداده، بايد آن روز را روزه بگيرد، و اگر انجام داده روزه آن روز بر او واجب نيست.</li>
+                         <li>	اگر مسافر بعد از ظهر به وطنش برسد، يا به جايى برسد كه می‌خواهد ده روز در آن جا بماند، نبايد آن روز را روزه بگيرد.</li>
+                         <li>مسافر و كسى كه از روزه گرفتن عذر دارد، مكروه است در روز ماه رمضان در خوردن و آشاميدن كاملا خود را سير كند.</li>
+                         
+                     </ul>
+                    
+
+                </div>
+            </div>
+
+
+        </div>
+    </body>
+</html>

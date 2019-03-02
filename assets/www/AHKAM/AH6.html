@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <style>
+                        @font-face {
+                            font-family: Badr;
+                            src: url("font/B Badr Bold.ttf");
+                        }
+                        @font-face {
+                            font-family: Baran;
+                            src: url("font/B Baran.ttf");
+                        }
+                        @font-face {
+                            font-family: Elham;
+                            src: url("font/B Elham.ttf");
+                        }
+            
+                        @font-face {
+                            font-family: Homa;
+                            src: url("font/B Homa.ttf");
+                        }
+                        @font-face {
+                            font-family: Kamran;
+                            src: url("font/B Kamran.ttf");
+                        }
+                        @font-face {
+                            font-family: Titr;
+                            src: url("font/B Titr Bold.ttf");
+                        }
+                        @font-face {
+                            font-family: Yekan;
+                            src: url("font/B Yekan.ttf");
+                        }
+                        @font-face {
+                            font-family: Zar;
+                            src: url("font/B Zar.ttf");
+                        }
+            
+            
+            
+            
+            
+                        html 
+                        {
+                            height:100%;
+                        }
+                        body 
+                        {
+                            height:100%; 
+                            margin:0; 
+                            padding:0;       
+                        }
+                        #bg {
+                            position:fixed; 
+                            top:0; 
+                            left:0; 
+                            width:100%; 
+                            height:100%;
+                        }
+                        #context {
+                            position:relative; 
+                            z-index:1;
+            
+            
+                        }
+                        .title
+                        {
+                            text-align: center;
+                            color: blue;
+                            font-size: 18pt;
+                        }
+                        .topic
+                        {
+                            text-align: justify;
+                            text-justify: inter-word;
+                            margin-right: 10px;
+                            margin-left: 10px;
+                            font-family: Tahoma;
+                            color:#36383e;
+                            font-size: 12pt;
+                        }
+            
+                        .doa{
+                            text-align: justify;
+                            margin-right: 10px;
+                            margin-left: 10px;
+                            font-family: Tahoma;
+                            border-radius: 14px;
+                            border-style: solid;
+                            padding: 5px;
+                            line-height: 1.8;
+                        }
+            
+                        .titr
+                        {
+                            margin-right: 10px;
+                            font-family:Tahoma;
+                            font-size: 15pt;
+                            color: #0026ff;
+                        }
+                        .buttons
+                        {
+                            border-radius: 10px;
+                            border-style: solid;
+                            background-color: #0af;
+                            text-align: center;
+                            left: 0px;right: 0px;
+                            position: fixed
+                        }
+                        select
+                        {
+                            text-align: center;
+                            appearance:none;
+                            -moz-appearance:none; /* Firefox */
+                            -webkit-appearance:none; /* Safari and Chrome */
+                        }
+        </style>
+        <script>
+            var color;
+            var size;
+            function changefont() {
+                var x = document.getElementById("font").value;
+                var el = document.getElementsByClassName("topic");
+                var i;
+                for (i = 0; i < el.length; i++) {
+                    el[i].setAttribute("style", "font-family: " + x + ";");
+                }
+            }
+            function changesize() {
+                size = document.getElementById("size").value;
+                var el = document.getElementsByClassName("topic");
+                var i;
+                for (i = 0; i < el.length; i++) {
+                    el[i].style.fontSize = size+"pt";
+                  //  el[i].setAttribute("style", "font-size: " + size + "px;");
+                }
+            }
+            function changecolor() {
+                color = document.getElementById("color").value;
+                var el = document.getElementsByClassName("topic");
+                var i;
+                for (i = 0; i < el.length; i++) {
+                    el[i].style.color = color;
+                    //  el[i].setAttribute("style", "color: " + x + ";");
+                }
+            }
+        </script>
+    </head>
+    <body dir="rtl">
+        <div id="bg">
+            <img alt="" src="../IMG/b2.jpg" width="100%" height="100%">
+        </div>
+
+        <div id="context">
+            <div class="buttons">
+
+                <select id="font" style="display: none" onchange="changefont()">
+                    <option value="Yekan">Yekan</option>
+                    <option value="Titr">Titr</option>
+                    <option value="Homa">Homa</option>
+                    <option value="Elham">Elham</option>
+                    <option value="Badr">Badr</option>
+                    <option value="Baran">Baran</option>
+                    <option value="Kamran">Kamran</option>
+                    <option value="Zar">Zar</option>
+                </select>
+                سایز متن:
+                <select id="size" onchange="changesize()">
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12" selected>12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                </select>
+
+                رنگ متن:
+                <select id="color" onchange="changecolor()">
+                    <option value="black">مشکی</option>
+                    <option value="red">قرمز</option>
+                    <option value="green">سبز</option>
+                    <option value="blue">آبی</option>
+                    <option value="orange">نارنجی</option>
+                    <option value="white">سفید</option>
+
+                </select>
+            </div>
+            <br />
+            <br />
+            <div>
+                <div class="title">
+                 كفاره روزه
+                </div>
+                
+                <div class="topic">
+                    
+                     <ul>
+                         <li>كسى كه كفاره روزه رمضان بر او واجب است، بايد يك بنده آزاد كند يا به دستورى كه در پايين گفته می‌شود، دو ماه روزه بگيرد يا شصت فقير را سير كند يا به هر كدام، يك مد كه تقريبا ده سير است، طعام يعنى گندم يا جو و مانند اينها بدهد، و چنانچه اينها برايش ممكن نباشد، هر چند مد كه می‌تواند به فقرا طعام بدهد و اگر نتواند طعام بدهد بايد استغفار كند، اگر چه مثلا يك مرتبه بگويد: "استغفرالله"، و احتياط واجب در فرض اخير آن است كه هر وقت بتواند، كفاره را بدهد.</li>
+                         <li>كسى كه می‌خواهد دو ماه كفاره روزه رمضان را بگيرد، بايد سى و يك روز آن را پى در پى بگيرد، و اگر بقيه آن پى در پى نباشد، اشكال ندارد.</li>
+                         <li>كسى كه می‌خواهد دو ماه كفاره روزه رمضان را بگيرد، نبايد موقعى شروع كند كه در بين سى و يك روز، روزى باشد كه مانند عيد قربان روزه آن حرام است.</li>
+                         <li>كسى كه بايد پى در پى روزه بگيرد، اگر در بين آن بدون عذر يك روز روزه نگيرد، يا وقتى شروع كند كه در بين آن به روزى برسد كه روزه آن واجب است، مثلا به روزى برسد كه نذر كرده آن روز را روزه بگيرد، بايد روزه‏ها را از سر بگيرد.</li>
+                         <li>اگر در بين روزهايى كه بايد پى در پى روزه بگيرد، عذرى مثل حيض يا سفرى كه در رفتن آن مجبور است، براى او پيش آيد، بعد از برطرف شدن عذر واجب نيست روزه‌ها را از سر بگيرد، بلكه بقيه را بعد از برطرف شدن عذر به جا می‌آورد.</li>
+                         <li>اگر به چيز حرامى روزه خود را باطل كند، چه آن چيز اصلا حرام باشد مثل شراب و زنا يا به جهتى حرام شده باشد، بنا بر احتياط كفاره جمع بر او واجب می‌شود، يعنى بايد يك بنده آزاد كند و دو ماه روزه بگيرد و شصت فقير را سير كند يا به هر كدام آنها يك مد كه تقريبا ده سير است گندم يا جو يا نان و مانند اينها بدهد، و چنانچه هر سه برايش ممكن نباشد، هر كدام آنها را كه ممكن است بايد انجام دهد.</li>
+                         <li>اگر روزه‌دار دروغى را به خدا و پيغمبر(صلى الله عليه و آله و سلم) نسبت دهد، كفاره جمع كه تفصيل آن در بالا گفته شد، بنابر احتياط بر او واجب می‌شود.</li>
+                         <li>اگر روزه‌دار در يك روز ماه رمضان چند مرتبه كار ديگرى غير از جماع كه روزه را باطل می‌كند انجام دهد، براى همه آنها يك كفاره كافى است.</li>
+                         <li>اگر روزه‌دار كارى كه حلال است و روزه را باطل می‌كند، انجام دهد، مثلا آب بياشامد و بعد كار ديگرى كه حرام است و روزه را باطل می‌كند انجام دهد، مثلا غذاى حرامى بخورد يك كفاره كافى است.</li>
+                         <li>اگر روزه‌دار آروغ بزند و چيزى در دهانش بيايد، چنانچه عمدا آن را فرو ببرد، روزه‏اش باطل است و بايد قضاى آن را بگيرد و كفاره هم بر او واجب می‌شود، و اگر خوردن آن چيز حرام باشد، مثلا موقع آروغ زدن خون يا غذايى كه از صورت غذا بودن خارج شده به دهان او بيايد و عمدا آن را فرو برد، بايد قضاى آن روزه را بگيرد و بنابراحتياط كفاره جمع هم بر او واجب می‌شود.</li>
+                         <li>اگر نذر كند كه روز معينى را روزه بگيرد، چنانچه در آن روز عمدا روزه خود را باطل كند، بايد يك بنده آزاد نمايد، يا دو ماه پى در پى روزه بگيرد يا به شصت فقير طعام دهد.</li>
+                         <li>	اگر به گفته كسى كه می‌گويد مغرب شده افطار كند، و بعد بفهمد مغرب نبوده است، قضا و كفاره بر او واجب می‌شود. ولى اگر خبر دهنده عادل بوده، فقط قضاى آن روزه واجب است.</li>
+                         <li>	كسى كه عمدا روزه خود را باطل كرده، اگر بعد از ظهر مسافرت كند، يا پيش از ظهر براى فرار از كفاره سفر نمايد، كفاره از او ساقط نمی‌شود، بلكه اگر قبل از ظهر مسافرتى براى او پيش آمد كند، بنابر احتياط كفاره بر او واجب است.</li>
+                         <li>	اگر كسی عمدا روزه خود را باطل كند و بعد عذرى مانند حيض يا مرض براى او پيدا شود، كفاره بر او واجب نيست.</li>
+                         <li>اگر يقين كند كه روز اول ماه رمضان است و عمدا روزه خود را باطل كند، بعد معلوم شود كه آخر شعبان بوده، كفاره بر او واجب نيست.</li>
+                         <li>	اگر انسان شك كند كه آخر رمضان است يا اول شوال و عمدا روزه خود را باطل كند، بعد معلوم شود اول شوال بوده، كفاره بر او واجب نيست.</li>
+                         <li>	انسان نبايد در بجا آوردن كفاره كوتاهى كند، ولى لازم نيست فورا آن را انجام دهد.</li>
+                         <li>اگر كفاره بر انسان واجب شود و چند سال آن را بجا نياورد، چيزى بر آن اضافه نمی‌شود.</li>
+                         <li>كسى كه بايد براى كفاره يك روز شصت فقير را طعام بدهد، اگر به شصت فقير دسترسى دارد، نبايد به هر كدام از آنها بيشتر از يك مد كه تقريبا ده سير است طعام بدهد، يا يك فقير را بيشتر از يك مرتبه سير نمايد، ولى چنانچه انسان اطمينان داشته باشد كه فقير طعام را به عيالات خود می‌دهد يا به آنها می‌خوراند، می‌تواند براى هر يك از عيالات فقير اگرچه صغير باشند يك مد به آن فقير بدهد.</li>
+                         <li>كسى كه قضاى روزه رمضان را گرفته، اگر بعد از ظهر عمدا كارى كه روزه را باطل می‌كند انجام دهد، بايد به ده فقير هر كدام يك مد كه تقريبا ده سير است طعام بدهد، و اگر نمی‌تواند بنابر احتياط واجب بايد سه روز پى در پى روزه بگيرد.</li>
+                     </ul>
+                    
+
+                </div>
+            </div>
+
+
+        </div>
+    </body>
+</html>

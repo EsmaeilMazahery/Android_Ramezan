@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <style>
+                        @font-face {
+                            font-family: Badr;
+                            src: url("font/B Badr Bold.ttf");
+                        }
+                        @font-face {
+                            font-family: Baran;
+                            src: url("font/B Baran.ttf");
+                        }
+                        @font-face {
+                            font-family: Elham;
+                            src: url("font/B Elham.ttf");
+                        }
+            
+                        @font-face {
+                            font-family: Homa;
+                            src: url("font/B Homa.ttf");
+                        }
+                        @font-face {
+                            font-family: Kamran;
+                            src: url("font/B Kamran.ttf");
+                        }
+                        @font-face {
+                            font-family: Titr;
+                            src: url("font/B Titr Bold.ttf");
+                        }
+                        @font-face {
+                            font-family: Yekan;
+                            src: url("font/B Yekan.ttf");
+                        }
+                        @font-face {
+                            font-family: Zar;
+                            src: url("font/B Zar.ttf");
+                        }
+            
+            
+            
+            
+            
+                        html 
+                        {
+                            height:100%;
+                        }
+                        body 
+                        {
+                            height:100%; 
+                            margin:0; 
+                            padding:0;       
+                        }
+                        #bg {
+                            position:fixed; 
+                            top:0; 
+                            left:0; 
+                            width:100%; 
+                            height:100%;
+                        }
+                        #context {
+                            position:relative; 
+                            z-index:1;
+            
+            
+                        }
+                        .title
+                        {
+                            text-align: center;
+                            color: blue;
+                            font-size: 18pt;
+                        }
+                        .topic
+                        {
+                            text-align: justify;
+                            text-justify: inter-word;
+                            margin-right: 10px;
+                            margin-left: 10px;
+                            font-family: Tahoma;
+                            color:#36383e;
+                            font-size: 12pt;
+                        }
+            
+                        .doa{
+                            text-align: justify;
+                            margin-right: 10px;
+                            margin-left: 10px;
+                            font-family: Tahoma;
+                            border-radius: 14px;
+                            border-style: solid;
+                            padding: 5px;
+                            line-height: 1.8;
+                        }
+            
+                        .titr
+                        {
+                            margin-right: 10px;
+                            font-family:Tahoma;
+                            font-size: 15pt;
+                            color: #0026ff;
+                        }
+                        .buttons
+                        {
+                            border-radius: 10px;
+                            border-style: solid;
+                            background-color: #0af;
+                            text-align: center;
+                            left: 0px;right: 0px;
+                            position: fixed
+                        }
+                        select
+                        {
+                            text-align: center;
+                            appearance:none;
+                            -moz-appearance:none; /* Firefox */
+                            -webkit-appearance:none; /* Safari and Chrome */
+                        }
+        </style>
+        <script>
+            var color;
+            var size;
+            function changefont() {
+                var x = document.getElementById("font").value;
+                var el = document.getElementsByClassName("topic");
+                var i;
+                for (i = 0; i < el.length; i++) {
+                    el[i].setAttribute("style", "font-family: " + x + ";");
+                }
+            }
+            function changesize() {
+                size = document.getElementById("size").value;
+                var el = document.getElementsByClassName("topic");
+                var i;
+                for (i = 0; i < el.length; i++) {
+                    el[i].style.fontSize = size+"pt";
+                  //  el[i].setAttribute("style", "font-size: " + size + "px;");
+                }
+            }
+            function changecolor() {
+                color = document.getElementById("color").value;
+                var el = document.getElementsByClassName("topic");
+                var i;
+                for (i = 0; i < el.length; i++) {
+                    el[i].style.color = color;
+                    //  el[i].setAttribute("style", "color: " + x + ";");
+                }
+            }
+        </script>
+    </head>
+    <body dir="rtl">
+        <div id="bg">
+            <img alt="" src="../../IMG/b2.jpg" width="100%" height="100%">
+        </div>
+
+        <div id="context">
+            <div class="buttons">
+
+                <select id="font" style="display: none" onchange="changefont()">
+                    <option value="Yekan">Yekan</option>
+                    <option value="Titr">Titr</option>
+                    <option value="Homa">Homa</option>
+                    <option value="Elham">Elham</option>
+                    <option value="Badr">Badr</option>
+                    <option value="Baran">Baran</option>
+                    <option value="Kamran">Kamran</option>
+                    <option value="Zar">Zar</option>
+                </select>
+                سایز متن:
+                <select id="size" onchange="changesize()">
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12" selected>12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                </select>
+
+                رنگ متن:
+                <select id="color" onchange="changecolor()">
+                    <option value="black">مشکی</option>
+                    <option value="red">قرمز</option>
+                    <option value="green">سبز</option>
+                    <option value="blue">آبی</option>
+                    <option value="orange">نارنجی</option>
+                    <option value="white">سفید</option>
+
+                </select>
+            </div>
+            <br />
+            <br />
+            <div>
+                <div class="title">
+                خوردن و آشاميدن
+                </div>
+                
+                <div class="topic">
+                     <ul>
+                         <li>اگر روزه‌دار عمدا چيزى بخورد يا بیاشامد، روزه او باطل می‌شود، چه خوردن و آشاميدن آن چيز معمول باشد مثل نان و آب، چه معمول نباشد مثل خاك و شيره درخت، چه كم باشد يا زياد. حتى اگر مسواك را از دهان بيرون آورد و دوباره به دهان ببرد و رطوبت آن را فرو برد، روزه او باطل می‌شود مگر آنكه رطوبت مسواك در آب دهان طورى از بين برود كه رطوبت خارج به آن گفته نشود.</li>
+                         <li>اگر موقعى كه مشغول غذا خوردن است بفهمد صبح شده بايد لقمه را از دهان بيرون آورد و چنانچه عمدا فرو برد روزه‌اش باطل است و به دستورى كه بعدا گفته خواهد شد كفاره هم بر او واجب می‌شود.</li>
+                         <li>اگر روزه‌دار سهوا (غيرعمدی) چيزى بخورد يا بياشامد، روزه‌اش باطل نمی‌شود.</li>
+                         <li>احتياط واجب آن است كه روزه‏دار از استعمال آمپولى كه به جاى غذا به كار مى رود خوددارى كند ولى تزريق آمپولى كه عضو را بى حس می‌كند يا به جاى دوا استعمال می‌شود اشكال ندارد.</li>
+                         <li>اگر روزه‏دار چيزى را كه لاى دندان مانده است عمدا فرو ببرد، روزه‌اش باطل می‌شود.</li>
+                         <li>كسى كه می‌خواهد روزه بگيرد، لازم نيست پيش از اذان دندانهايش را خلال كند، ولى اگر بداند غذايى كه لاى دندان مانده در روز فرو مى رود، چنانچه خلال نكند و چيزى از آن فرو رود روزه‌اش باطل می‌شود، بلكه اگر فرو هم نرود، بنابر احتياط واجب بايد قضاى آن روز را بگيرد.</li>
+                         <li>فرو بردن آب دهان، اگر چه به‌ واسطه‌ی خيال كردن ترشى و مانند آن در دهان جمع شده باشد، روزه را باطل نمی‌كند.</li>
+                         <li>فرو بردن اخلاط سر و سينه، تا به فضاى دهان نرسيده اشكال ندارد ولى اگر داخل فضاى دهان شود، احتياط واجب آن است كه آن را فرو نبرد.</li>
+                         <li>اگر روزه دار به قدرى تشنه شود كه بترسد از تشنگى بميرد، می‌تواند به اندازه‌اى كه از مردن نجات پيدا كند آب بياشامد، ولى روزه او باطل می‌شود و اگر ماه رمضان باشد بايد در بقيه روز از انجام دادن كارى كه روزه را باطل می‌كند خوددارى نمايد.</li>
+                         <li>جويدن غذا براى بچه يا پرنده و چشيدن غذا و مانند اينها كه معمولا به حلق نمی‌رسد، اگر چه اتفاقا به حلق برسد روزه را باطل نمی‌كند ولى اگر انسان از اول بداند كه به حلق مى رسد چنانچه فرو رود روزه‌اش باطل می‌شود و بايد قضاى آن را بگيرد و كفاره هم بر او واجب است.</li>
+                         <li>	انسان نمی‌تواند براى ضعف روزه را بخورد، ولى اگر ضعف او به قدرى است كه معمولا نمی‌شود آن را تحمل كرد خوردن روزه اشكال ندارد.</li>
+                     </ul>
+                </div>
+            </div>
+
+
+        </div>
+    </body>
+</html>

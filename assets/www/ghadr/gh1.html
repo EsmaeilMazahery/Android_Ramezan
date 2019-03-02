@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <style>
+                        @font-face {
+                            font-family: Badr;
+                            src: url("font/B Badr Bold.ttf");
+                        }
+                        @font-face {
+                            font-family: Baran;
+                            src: url("font/B Baran.ttf");
+                        }
+                        @font-face {
+                            font-family: Elham;
+                            src: url("font/B Elham.ttf");
+                        }
+            
+                        @font-face {
+                            font-family: Homa;
+                            src: url("font/B Homa.ttf");
+                        }
+                        @font-face {
+                            font-family: Kamran;
+                            src: url("font/B Kamran.ttf");
+                        }
+                        @font-face {
+                            font-family: Titr;
+                            src: url("font/B Titr Bold.ttf");
+                        }
+                        @font-face {
+                            font-family: Yekan;
+                            src: url("font/B Yekan.ttf");
+                        }
+                        @font-face {
+                            font-family: Zar;
+                            src: url("font/B Zar.ttf");
+                        }
+            
+            
+            
+            
+            
+                        html 
+                        {
+                            height:100%;
+                        }
+                        body 
+                        {
+                            height:100%; 
+                            margin:0; 
+                            padding:0;       
+                        }
+                        #bg {
+                            position:fixed; 
+                            top:0; 
+                            left:0; 
+                            width:100%; 
+                            height:100%;
+                        }
+                        #context {
+                            position:relative; 
+                            z-index:1;
+            
+            
+                        }
+                        .title
+                        {
+                            text-align: center;
+                            color: blue;
+                            font-size: 18pt;
+                        }
+                        .topic
+                        {
+                            text-align: justify;
+                            text-justify: inter-word;
+                            margin-right: 10px;
+                            margin-left: 10px;
+                            font-family: Tahoma;
+                            color:#36383e;
+                            font-size: 12pt;
+                        }
+            
+                        .doa{
+                            text-align: justify;
+                            margin-right: 10px;
+                            margin-left: 10px;
+                            font-family: Tahoma;
+                            border-radius: 14px;
+                            border-style: solid;
+                            padding: 5px;
+                            line-height: 1.8;
+                        }
+            
+                        .titr
+                        {
+                            margin-right: 10px;
+                            font-family:Tahoma;
+                            font-size: 15pt;
+                            color: #0026ff;
+                        }
+                        .buttons
+                        {
+                            border-radius: 10px;
+                            border-style: solid;
+                            background-color: #0af;
+                            text-align: center;
+                            left: 0px;right: 0px;
+                            position: fixed
+                        }
+                        select
+                        {
+                            text-align: center;
+                            appearance:none;
+                            -moz-appearance:none; /* Firefox */
+                            -webkit-appearance:none; /* Safari and Chrome */
+                        }
+        </style>
+        <script>
+            var color;
+            var size;
+            function changefont() {
+                var x = document.getElementById("font").value;
+                var el = document.getElementsByClassName("topic");
+                var i;
+                for (i = 0; i < el.length; i++) {
+                    el[i].setAttribute("style", "font-family: " + x + ";");
+                }
+            }
+            function changesize() {
+                size = document.getElementById("size").value;
+                var el = document.getElementsByClassName("topic");
+                var i;
+                for (i = 0; i < el.length; i++) {
+                    el[i].style.fontSize = size+"pt";
+                  //  el[i].setAttribute("style", "font-size: " + size + "px;");
+                }
+            }
+            function changecolor() {
+                color = document.getElementById("color").value;
+                var el = document.getElementsByClassName("topic");
+                var i;
+                for (i = 0; i < el.length; i++) {
+                    el[i].style.color = color;
+                    //  el[i].setAttribute("style", "color: " + x + ";");
+                }
+            }
+        </script>
+    </head>
+    <body dir="rtl">
+        <div id="bg">
+            <img alt="" src="../IMG/b2.jpg" width="100%" height="100%">
+        </div>
+
+        <div id="context">
+            <div class="buttons">
+
+                <select id="font" style="display: none" onchange="changefont()">
+                    <option value="Yekan">Yekan</option>
+                    <option value="Titr">Titr</option>
+                    <option value="Homa">Homa</option>
+                    <option value="Elham">Elham</option>
+                    <option value="Badr">Badr</option>
+                    <option value="Baran">Baran</option>
+                    <option value="Kamran">Kamran</option>
+                    <option value="Zar">Zar</option>
+                </select>
+                سایز متن:
+                <select id="size" onchange="changesize()">
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12" selected>12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                </select>
+
+                رنگ متن:
+                <select id="color" onchange="changecolor()">
+                    <option value="black">مشکی</option>
+                    <option value="red">قرمز</option>
+                    <option value="green">سبز</option>
+                    <option value="blue">آبی</option>
+                    <option value="orange">نارنجی</option>
+                    <option value="white">سفید</option>
+
+                </select>
+            </div>
+            <br />
+            <br />
+            <div>
+                <div class="title">
+                فضیلت های شب قدر
+                </div>
+                
+                <div class="topic">
+                    <div class="doa">
+                        بِسْمِ اللَّهِ الرَّحْمنِ الرَّحِیمِ‏
+                        <ol>
+                            <li>إِنَّا أَنْزَلْناهُ فِی لَیْلَةِ الْقَدْرِ</li>
+                            <li>وَ ما أَدْراکَ ما لَیْلَةُ الْقَدْرِ </li>
+                            <li>لَیْلَةُ الْقَدْرِ خَیْرٌ مِنْ أَلْفِ شَهْرٍ </li>
+                            <li>تَنَزَّلُ الْمَلائِکَةُ وَ الرُّوحُ فِیها بِإِذْنِ رَبِّهِمْ مِنْ کُلِّ أَمْرٍ </li>
+                            <li>سَلامٌ هِیَ حَتَّی مَطْلَعِ الْفَجْرِ </li>
+                        </ol>
+                    </div>
+                     <div>
+                     با توجه به آیات سوره قدر می‌توان به فضیلت‌های شب قدر پی برد:
+                         <ol>
+                             <li>قرآن در آن نازل شده است.</li>
+                             <li>عبادت و احیای آن معادل بیش از هزار ماه است.</li>
+                             <li>خیرات و برکات الهی در آن شب نازل می‏شود.</li>
+                             <li> رحمت خاص خدا شامل حال بندگان می‏گردد.</li>
+                             <li>فرشتگان و روح در آن شب نازل می‏گردند.</li>
+                         </ol>
+                     </div>
+                    <div>
+                    شب قدر از شب‌های مقدس و متبرک اسلامی است. خداوند در قرآن مجید از آن به بزرگی یاد کرده و سوره‌ای نیز به نام «سوره قدر» نازل فرموده است. در تمام سال، شبی به خوبی و فضیلت شب قدر نمی‌رسد. این شب، شب نزول قرآن، شب فرود آمدن ملائکه و روح نیز نام گرفته است. عبادت در شب قدر برتر از عبادت هزار ماه است. در این شب، مقدرات یک سال انسان‌ها و روزی‌ها، عمرها و امور دیگر مشخص می‌شود. ملائکه در این شب بر زمین فرود می‌آیند، نزد امام زمان(عج) می‌روند و آنچه را برای بندگان مقدر شده بر ایشان عرضه می‌دارند. شب‌زنده‌داری و تلاوت قرآن و مناجات و عبادت در این شب، بسیار توصیه و تأکید شده است.
+                    </div>
+                    <div style="text-align: center;font-weight: bold;">
+                    عظمت و فضیلت این شب بر سایر شبها را از این امور می‌توان به دست آورد:
+                    </div>
+                    <div>
+                        <ol>
+                            <li>آمرزش گناهان: پیامبر خدا(ص) در تفسیر سوره «قدر» فرمودند:
+«هر کس شب قدر را احیا بدارد و مؤمن باشد و به روز جزا اعتقاد داشته باشد، تمامی گناهانش آمرزیده میشود.»</li>
+                            <li>قلب رمضان: امام صادق(ع) فرمودند:
+«از کتاب خدا استفاده می‌شود که شماره ماههای سال نزد خداوند، دوازده ماه است و سرآمد ماهها ماه رمضان است و قلب ماه رمضان لیلة القدر است.»</li>
+                            <li>نزول قرآن: طبق روایات، مجموع قرآن در شب قدر دفعی و یکباره بر پیامبر (ص) نازل شده است. این نزول دفعی و یکباره قرآن است، اما نزول تدریجی قرآن طی 23 سال دوران نبوت پیامبر گرامی(ص) به صورت الفاظ نازل شده است.</li>
+                            <li>برتر از هزار ماه: نزول همه‌ی ملائکه و روح در شب قدر بر زمین و سلام دادن بر بندگان خدا نشانه شرافت آن بر هزار ماه است. امام باقر(ع) فرمودند:
+«عمل صالح در شب قدر از قبیل نماز، زکات و کارهای نیک دیگر بهتر است از عمل در هزار ماهی که در آن شب قدر نباشد.»</li>
+                        </ol>
+                    </div>
+                    <div style="text-align: center;font-weight: bold;">
+                        فرصت شب قدر را غنیمت بدانیم
+                    </div>
+                    <div>
+                    شب قدر فرصتی است زرین و طلایی برای شستشوی آینه دل. این شب بهترین فرصت است تا خوبی‌ها را جایگزین بدیها، صلح و صفا را جایگزین اختلاف و تفرقه، احسان و نیکی را جایگزین ظلم و ستم، احسان به والدین را جایگزین عاق والدین و صله رحم را جایگزین قطع رحم نماییم. نیکو و شایسته است با صدقات قدمی در جهت آبادانی خانه آخرت برداریم و با اعمال نیک و خیر، ثواب دو چندان ببریم.
+                        <br/>
+                        در شب قدر که شب‌زنده‌داری می‌کنیم، خداوند نام ما را در گروه نیک‌بختان ثبت می‌کند و آتش جهنم را بر ما حرام می‌سازد. آیا توفیقی بالاتر از این هست که آتش جهنم بر ما حرام شود و به خدا نزدیک‌تر شویم؟
+                        <br/>
+                        دعاهای شبهای رمضان مجموعه‌ای است روشنی‌بخش که با تکرار تلاوت آنها، آموزش‌های آن‌ها به صورت هدف‌هایی برای ما در می‌آیند. پس هنگام خواندن این ادعیه شایسته و بهتر است مفهوم آنها را نیز همواره مدنظر داشته باشیم و با تلاش و کوشش به سوی این هدف‌های مطرح‌شده در دعاها گام برداریم.
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </body>
+</html>

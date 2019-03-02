@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="ir.dancecodes.ramezan.MainActivity" >
+
+    <item
+        android:id="@+id/btn_exit"
+        android:orderInCategory="100"
+        android:title="@string/exit"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/btn_res"
+        android:orderInCategory="100"
+        android:title="@string/res"
+        app:showAsAction="never"/>
+
+</menu>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <style>
+                        @font-face {
+                            font-family: Badr;
+                            src: url("font/B Badr Bold.ttf");
+                        }
+                        @font-face {
+                            font-family: Baran;
+                            src: url("font/B Baran.ttf");
+                        }
+                        @font-face {
+                            font-family: Elham;
+                            src: url("font/B Elham.ttf");
+                        }
+            
+                        @font-face {
+                            font-family: Homa;
+                            src: url("font/B Homa.ttf");
+                        }
+                        @font-face {
+                            font-family: Kamran;
+                            src: url("font/B Kamran.ttf");
+                        }
+                        @font-face {
+                            font-family: Titr;
+                            src: url("font/B Titr Bold.ttf");
+                        }
+                        @font-face {
+                            font-family: Yekan;
+                            src: url("font/B Yekan.ttf");
+                        }
+                        @font-face {
+                            font-family: Zar;
+                            src: url("font/B Zar.ttf");
+                        }
+            
+            
+            
+            
+            
+                        html 
+                        {
+                            height:100%;
+                        }
+                        body 
+                        {
+                            height:100%; 
+                            margin:0; 
+                            padding:0;       
+                        }
+                        #bg {
+                            position:fixed; 
+                            top:0; 
+                            left:0; 
+                            width:100%; 
+                            height:100%;
+                        }
+                        #context {
+                            position:relative; 
+                            z-index:1;
+            
+            
+                        }
+                        .title
+                        {
+                            text-align: center;
+                            color: blue;
+                            font-size: 18pt;
+                        }
+                        .topic
+                        {
+                            text-align: justify;
+                            text-justify: inter-word;
+                            margin-right: 10px;
+                            margin-left: 10px;
+                            font-family: Tahoma;
+                            color:#36383e;
+                            font-size: 12pt;
+                        }
+            
+                        .doa{
+                            text-align: justify;
+                            margin-right: 10px;
+                            margin-left: 10px;
+                            font-family: Tahoma;
+                            border-radius: 14px;
+                            border-style: solid;
+                            padding: 5px;
+                            line-height: 1.8;
+                        }
+            
+                        .titr
+                        {
+                            margin-right: 10px;
+                            font-family:Tahoma;
+                            font-size: 15pt;
+                            color: #0026ff;
+                        }
+                        .buttons
+                        {
+                            border-radius: 10px;
+                            border-style: solid;
+                            background-color: #0af;
+                            text-align: center;
+                            left: 0px;right: 0px;
+                            position: fixed
+                        }
+                        select
+                        {
+                            text-align: center;
+                            appearance:none;
+                            -moz-appearance:none; /* Firefox */
+                            -webkit-appearance:none; /* Safari and Chrome */
+                        }
+        </style>
+        <script>
+            var color;
+            var size;
+            function changefont() {
+                var x = document.getElementById("font").value;
+                var el = document.getElementsByClassName("topic");
+                var i;
+                for (i = 0; i < el.length; i++) {
+                    el[i].setAttribute("style", "font-family: " + x + ";");
+                }
+            }
+            function changesize() {
+                size = document.getElementById("size").value;
+                var el = document.getElementsByClassName("topic");
+                var i;
+                for (i = 0; i < el.length; i++) {
+                    el[i].style.fontSize = size+"pt";
+                  //  el[i].setAttribute("style", "font-size: " + size + "px;");
+                }
+            }
+            function changecolor() {
+                color = document.getElementById("color").value;
+                var el = document.getElementsByClassName("topic");
+                var i;
+                for (i = 0; i < el.length; i++) {
+                    el[i].style.color = color;
+                    //  el[i].setAttribute("style", "color: " + x + ";");
+                }
+            }
+        </script>
+    </head>
+    <body dir="rtl">
+        <div id="bg">
+            <img alt="" src="../../IMG/b2.jpg" width="100%" height="100%">
+        </div>
+
+        <div id="context">
+            <div class="buttons">
+
+                <select id="font" style="display: none" onchange="changefont()">
+                    <option value="Yekan">Yekan</option>
+                    <option value="Titr">Titr</option>
+                    <option value="Homa">Homa</option>
+                    <option value="Elham">Elham</option>
+                    <option value="Badr">Badr</option>
+                    <option value="Baran">Baran</option>
+                    <option value="Kamran">Kamran</option>
+                    <option value="Zar">Zar</option>
+                </select>
+                سایز متن:
+                <select id="size" onchange="changesize()">
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12" selected>12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                </select>
+
+                رنگ متن:
+                <select id="color" onchange="changecolor()">
+                    <option value="black">مشکی</option>
+                    <option value="red">قرمز</option>
+                    <option value="green">سبز</option>
+                    <option value="blue">آبی</option>
+                    <option value="orange">نارنجی</option>
+                    <option value="white">سفید</option>
+
+                </select>
+            </div>
+            <br />
+            <br />
+            <div>
+                <div class="title">
+                باقى ماندن بر جنابت و حيض تا اذان صبح
+                </div>
+                
+                <div class="topic">
+                     <ul>
+                         <li>	اگر جنب عمداً، تا اذان صبح غسل نكند يا اگر وظيفه او تيمم است عمدا تيمم ننمايد، روزه‏اش باطل است.</li>
+                         <li>اگر كسى در غير از روزه‌های ماه رمضان و قضاى آن (از اقسام روزه هاى واجب و مستحب) عمداً تا اذان صبح غسل نكند و تيمّم هم ننمايد، روزه اش صحيح است.</li>
+                         <li>	كسى كه جنب است و می‌خواهد روزه واجبى بگيرد كه مثل روزه‌ی رمضان وقت آن معين است، چنانچه عمدا غسل نكند تا وقت تنگ شود، می‌تواند با تيمم روزه بگيرد و صحيح است.</li>
+                         <li>	اگر جنب در ماه رمضان غسل را فراموش كند و بعد از يك روز يادش بيايد، بايد روزه آن روز را قضا نمايد و اگر بعد از چند روز يادش بيايد، بايد روزه هر چند روزى را كه يقين دارد جنب بوده قضا نمايد. مثلا اگر نمی‌داند سه روز جنب بوده يا چهار روز، بايد روزه سه روز را قضا كند.</li>
+                         <li>كسى كه در شب ماه رمضان جنب است و می‌داند كه اگر بخوابد تا صبح بيدار نمی‌شود، نبايد بخوابد و چنانچه بخوابد و تا صبح بيدار نشود روزه‏اش باطل است و قضا و كفاره بر او واجب می‌شود.</li>
+                         <li>	هرگاه جنب در شب ماه رمضان بخوابد و بيدار شود، اگر احتمال بدهد كه اگر دوباره بخوابد براى غسل بيدار می‌شود، می‌تواند بخوابد.</li>
+                         <li>	كسى كه در شب ماه رمضان جنب است و می‌داند يا احتمال می‌دهد كه اگر بخوابد پيش از اذان صبح بيدار می‌شود، چنانچه تصميم داشته باشد كه بعد از بيدار شدن غسل كند و با اين تصميم بخوابد و تا اذان خواب بماند، روزه‏اش صحيح است.</li>
+                         <li>كسى كه در شب ماه رمضان جنب است و می‌داند يا احتمال می‌دهد كه اگر بخوابد پيش از اذان صبح بيدار می‌شود، چنانچه غفلت داشته باشد كه بعد از بيدار شدن بايد غسل كند، در صورتى كه بخوابد و تا اذان صبح خواب بماند، روزه‏اش صحيح است.</li>
+                         <li>كسى كه در شب ماه رمضان جنب است و می‌داند يا احتمال می‌دهد كه اگر بخوابد پيش از اذان صبح بيدار می‌شود، چنانچه نخواهد بعد از بيدار شدن غسل كند، يا ترديد داشته باشد كه غسل كند يا نه، در صورتى كه بخوابد و بيدار نشود، روزه‏اش باطل است.</li>
+                         <li>اگر جنب در شب ماه رمضان بخوابد و بيدار شود و بداند يا احتمال دهد كه اگر دوباره بخوابد پيش از اذان صبح بيدار می‌شود و تصميم هم داشته باشد كه بعد از بيدار شدن غسل كند، چنانچه دوباره بخوابد و تا اذان صبح بيدار نشود بايد روزه‌ی آن روز را قضا كند و همچنين است اگر از خواب دوم بيدار شود و براى مرتبه سوم بخوابد، كفاره بر او واجب نمی‌شود.</li>
+                         <li>	خوابى را كه در آن محتلم شده نبايد خواب اول حساب كرد، بلكه اگراز آن خواب بيدار شود و دوباره بخوابد، خواب اول حساب می‌شود.</li>
+                         <li>اگر روزه‏دار در روز محتلم شود، واجب نيست فورا غسل كند.</li>
+                         <li>	هرگاه در ماه رمضان بعد از اذان صبح بيدار شود و ببيند محتلم شده، اگرچه بداند پيش از اذان محتلم شده، روزه او صحيح است.</li>
+                         <li>كسى كه می‌خواهد قضاى روزه رمضان را بگيرد، هرگاه تا اذان صبح جنب بماند، اگر چه از روى عمد نباشد، روزه او باطل است.</li>
+                         <li>كسى كه مى خواهد قضاى روزه رمضان را بگيرد اگر بعد از اذان صبح بيدار شود و ببيند محتلم شده و بداند پيش از اذان محتلم شده است، چنانچه وقت قضاى روزه تنگ است ـ مثلا پنج روز روزه قضاى رمضان دارد و پنج روز هم به رمضان مانده است ـ بايد بنا بر احتياط واجب، هم آن روز را روزه بگيرد و هم بعد از رمضان آن را قضا كند و اگر وقت قضاى روزه تنگ نيست، بايد روز ديگر روزه بگيرد و روزه آن روز صحيح نيست.</li>
+                         <li>اگر در روزه واجبى غير روزه رمضان و قضاى آن، تا اذان صبح جنب بماند، روزه‌اش صحيح است، چه وقت آن معين باشد و چه نباشد.</li>
+                         <li>	اگر زن پيش از اذان صبح از حيض پاك شود و عمدا غسل نكند يا اگر وظيفه او تيمم است تيمم نكند، روزه اش باطل است.</li>
+                         <li>	اگر زن پيش از اذان صبح از حيض پاك شود و براى غسل وقت نداشته باشد، چنانچه بخواهد روزه ماه رمضان يا قضاى آن را بگيرد، بايد تيمم نمايد و روزه‏اش صحيح است، و اگر بخواهد روزه مستحب يا روزه واجب مثل روزه كفاره و روزه نذرى بگيرد، اگرچه بدون تيمم هم روزه‏اش صحيح است، ولى احتياط مستحب آن است كه تيمم كند.</li>
+                         <li>	اگر زن نزديك اذان صبح از حيض پاك شود و براى هيچ كدام از غسل و تيمم وقت نداشته باشد، يا بعد از اذان بفهمد كه پيش از اذان پاك شده، روزه او صحيح است.</li>
+                         <li>	اگر زن بعد از اذان صبح از خون حيض پاك شود يا در بين روز خون حيض ببيند، اگر چه نزديك مغرب باشد، روزه او باطل است.</li>
+                         <li>	اگر زن غسل حيض را فراموش كند و بعد از يك روز يا چند روز يادش بيايد، روزه‏هايى كه گرفته صحيح است.</li>
+                         <li>اگر زن پيش از اذان صبح در ماه رمضان از حيض پاك شود ودر غسل كردن كوتاهى كند و تا اذان غسل نكند و در تنگى وقت تيمم هم نكند، روزه‏اش باطل است. ولى چنانچه كوتاهى نكند، مثلا منتظر باشد كه حمام زنانه شود، اگرچه سه مرتبه بخوابد و تا اذان غسل نكند، در صورتى كه تيمم كند روزه او صحيح است.</li>
+                         <li>اگر زنى كه در حال استحاضه است، غسلهاى خود را به تفصيلى كه در احكام استحاضه گفته شده به جا آورد، روزه او صحيح است.</li>
+                         <li>كسى كه مس ميت كرده، يعنى جايى از بدن خود را به بدن ميت رسانده می‌تواند بدون غسل مس ميت روزه بگيرد و اگر در حال روزه هم ميت را مس نمايد، روزه او باطل نمی‌شود.</li>
+                     </ul>
+                </div>
+            </div>
+
+
+        </div>
+    </body>
+</html>

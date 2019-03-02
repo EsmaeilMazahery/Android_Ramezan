@@ -1,0 +1,69 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/b_xl"
+    tools:context="ir.dancecodes.ramezan.MainActivity" >
+
+    <LinearLayout
+        android:layout_width="450dp"
+        android:layout_height="0dp"
+        android:layout_gravity="end"
+        android:gravity="end"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical"
+        android:layout_weight="1" >
+
+        <ListView
+            android:id="@+id/list_main"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:divider="@color/green"
+            android:dividerHeight="2dp"
+            android:layout_weight="1" >
+        </ListView>
+        
+    </LinearLayout>
+<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/aboutme"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginLeft="30sp"
+                        android:gravity="end"
+                        android:text="درباره ما"
+                        android:textColor="@color/green"
+                        android:textSize="40sp" />
+
+                    <Button
+                        android:id="@+id/btn_resource"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginLeft="30sp"
+                        android:gravity="end"
+                        android:text="@string/res"
+                        android:textColor="@color/green"
+                        android:textSize="40sp" />
+                </LinearLayout>
+    <Button
+        android:id="@+id/btn_back"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:textSize="40sp"
+        android:textColor="@color/white"
+        android:text="@string/btn_out" />
+
+</LinearLayout>

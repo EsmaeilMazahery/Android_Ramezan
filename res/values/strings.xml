@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="btn_myapp">برنامه های دیگر</string>
+    <string name="btn_nazar">نظر دهید!</string>
+    <string name="app_name">رمضان 94</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="ahadis">احادیث</string>
+    <string name="btn_back">برگشت</string>
+    <string name="btn_mainpage">صفحه اصلی</string>
+    <string name="btn_out">خروج</string>
+    <string name="aboutme_link"><a href="http://www.dancecodes.ir">www.dancecodes.ir</a></string>
+    <string name="resource_title">منابع:</string>
+    <string name="res_1">توضیح المسائل</string>
+    <string name="res_2">www.roshd.ir</string>
+    <string name="res_3">بحار الانوار</string>
+    <string name="res_4">شرح فروع کافی</string>
+    <string name="res_5">فضائل الاشهر الثلاثه</string>
+    <string name="res_6">وسایل الشیعه</string>
+    <string name="res">منابع</string>
+    <string name="exit">خروج</string>
+
+</resources>

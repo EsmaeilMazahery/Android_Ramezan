@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <style>
+                        @font-face {
+                            font-family: Badr;
+                            src: url("font/B Badr Bold.ttf");
+                        }
+                        @font-face {
+                            font-family: Baran;
+                            src: url("font/B Baran.ttf");
+                        }
+                        @font-face {
+                            font-family: Elham;
+                            src: url("font/B Elham.ttf");
+                        }
+            
+                        @font-face {
+                            font-family: Homa;
+                            src: url("font/B Homa.ttf");
+                        }
+                        @font-face {
+                            font-family: Kamran;
+                            src: url("font/B Kamran.ttf");
+                        }
+                        @font-face {
+                            font-family: Titr;
+                            src: url("font/B Titr Bold.ttf");
+                        }
+                        @font-face {
+                            font-family: Yekan;
+                            src: url("font/B Yekan.ttf");
+                        }
+                        @font-face {
+                            font-family: Zar;
+                            src: url("font/B Zar.ttf");
+                        }
+            
+            
+            
+            
+            
+                        html 
+                        {
+                            height:100%;
+                        }
+                        body 
+                        {
+                            height:100%; 
+                            margin:0; 
+                            padding:0;       
+                        }
+                        #bg {
+                            position:fixed; 
+                            top:0; 
+                            left:0; 
+                            width:100%; 
+                            height:100%;
+                        }
+                        #context {
+                            position:relative; 
+                            z-index:1;
+            
+            
+                        }
+                        .title
+                        {
+                            text-align: center;
+                            color: blue;
+                            font-size: 18pt;
+                        }
+                        .topic
+                        {
+                            text-align: justify;
+                            text-justify: inter-word;
+                            margin-right: 10px;
+                            margin-left: 10px;
+                            font-family: Tahoma;
+                            color:#36383e;
+                            font-size: 12pt;
+                        }
+            
+                        .doa{
+                            text-align: justify;
+                            margin-right: 10px;
+                            margin-left: 10px;
+                            font-family: Tahoma;
+                            border-radius: 14px;
+                            border-style: solid;
+                            padding: 5px;
+                            line-height: 1.8;
+                        }
+            
+                        .titr
+                        {
+                            margin-right: 10px;
+                            font-family:Tahoma;
+                            font-size: 15pt;
+                            color: #0026ff;
+                        }
+                        .buttons
+                        {
+                            border-radius: 10px;
+                            border-style: solid;
+                            background-color: #0af;
+                            text-align: center;
+                            left: 0px;right: 0px;
+                            position: fixed
+                        }
+                        select
+                        {
+                            text-align: center;
+                            appearance:none;
+                            -moz-appearance:none; /* Firefox */
+                            -webkit-appearance:none; /* Safari and Chrome */
+                        }
+        </style>
+        <script>
+            var color;
+            var size;
+            function changefont() {
+                var x = document.getElementById("font").value;
+                var el = document.getElementsByClassName("topic");
+                var i;
+                for (i = 0; i < el.length; i++) {
+                    el[i].setAttribute("style", "font-family: " + x + ";");
+                }
+            }
+            function changesize() {
+                size = document.getElementById("size").value;
+                var el = document.getElementsByClassName("topic");
+                var i;
+                for (i = 0; i < el.length; i++) {
+                    el[i].style.fontSize = size+"pt";
+                  //  el[i].setAttribute("style", "font-size: " + size + "px;");
+                }
+            }
+            function changecolor() {
+                color = document.getElementById("color").value;
+                var el = document.getElementsByClassName("topic");
+                var i;
+                for (i = 0; i < el.length; i++) {
+                    el[i].style.color = color;
+                    //  el[i].setAttribute("style", "color: " + x + ";");
+                }
+            }
+        </script>
+    </head>
+    <body dir="rtl">
+        <div id="bg">
+            <img alt="" src="../IMG/b2.jpg" width="100%" height="100%">
+        </div>
+
+        <div id="context">
+            <div class="buttons">
+
+                <select id="font" style="display: none" onchange="changefont()">
+                    <option value="Yekan">Yekan</option>
+                    <option value="Titr">Titr</option>
+                    <option value="Homa">Homa</option>
+                    <option value="Elham">Elham</option>
+                    <option value="Badr">Badr</option>
+                    <option value="Baran">Baran</option>
+                    <option value="Kamran">Kamran</option>
+                    <option value="Zar">Zar</option>
+                </select>
+                سایز متن:
+                <select id="size" onchange="changesize()">
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12" selected>12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                </select>
+
+                رنگ متن:
+                <select id="color" onchange="changecolor()">
+                    <option value="black">مشکی</option>
+                    <option value="red">قرمز</option>
+                    <option value="green">سبز</option>
+                    <option value="blue">آبی</option>
+                    <option value="orange">نارنجی</option>
+                    <option value="white">سفید</option>
+
+                </select>
+            </div>
+            <br />
+            <br />
+            <div>
+                <div class="title">
+                 نيت
+                </div>
+                
+                <div class="topic">
+                    
+                     <ul>
+                         <li>	لازم نيست انسان نيت روزه را از قلب خود بگذراند يا مثلا بگويد روزه می‌گيرم بلكه همين‌قدر كه براى انجام فرمان خداوند عالم از اذان صبح تا مغرب، كارى كه روزه را باطل می‌كند انجام ندهد، كافى است و براى آن كه يقين كند تمام اين مدت را روزه بوده، بايد مقدارى پيش از اذان صبح و مقدارى هم بعد از مغرب از انجام كارى كه روزه را باطل می‌كند خوددارى نمايد.</li>
+                         <li>انسان می‌تواند در هر شب از ماه رمضان برای روزه‌ی فرداى آن نيت كند اما بهتر است كه شب اول ماه نيت روزه‌ی همه ماه را بنمايد.</li>
+                         <li>	از اول شب ماه رمضان تا اذان صبح، هر وقت نيت روزه فردا را بكند اشكال ندارد.</li>
+                         <li>وقت نيت روزه مستحبى از اول شب است تا موقعى كه به اندازه نيت كردن به مغرب وقت مانده باشد، يعنی اگر تا آن موقع كارى كه روزه را باطل می‌كند انجام نداده باشد و نيت روزه مستحبى كند، روزه او صحيح است.</li>
+                         <li>كسى كه پيش از اذان صبح بدون نيت روزه خوابيده است، اگر پيش از ظهر بيدار شود و نيت كند، روزه او صحيح است چه روزه او واجب باشد چه مستحب، و اگر بعد از ظهر بيدار شود، نمی‌تواند نيت روزه واجب نمايد.</li>
+                         <li>اگر بخواهد غير روزه رمضان، روزه ديگرى بگيرد بايد آن را معين نمايد، مثلا نيت كند كه روزه قضا يا روزه نذر می‌گيرم، ولى در ماه رمضان لازم نيست نيت كند كه روزه ماه رمضان می‌گيرم، بلكه اگر نداند ماه رمضان است، يا فراموش نمايد و روزه ديگرى را نيت كند، روزه ماه رمضان حساب می‌شود.</li>
+                         <li>اگر بداند ماه رمضان است و عمدا نيت روزه غير رمضان كند، نه روزه رمضان حساب می‌شود و نه روزه‌اى كه قصد كرده است.</li>
+                         <li>	اگر مثلا به نيّت روز اول ماه، روزه بگيرد، بعد بفهمد روز دوم يا سوم بوده، روزه او صحيح است.</li>
+                         <li>اگر پيش از اذان صبح نيت كند و بی‌هوش شود و در بين روز به هوش آيد، بنابر احتياط واجب بايد روزه آن روز را تمام نمايد و اگر تمام نكرد،قضاى آن را بجا آورد.</li>
+                         <li>اگر پيش از اذان صبح نيت كند و بخوابد و بعد از مغرب بيدار شود، روزه‌اش صحيح است.</li>
+                         <li>اگر نداند يا فراموش كند كه ماه رمضان است و پيش از ظهر متوجه شود، چنانچه كارى كه روزه را باطل می‌كند انجام نداده باشد، بايد نيت كند و روزه او صحيح است و اگر كارى كه روزه را باطل می‌كند انجام داده باشد، يا بعدازظهر متوجه شود كه ماه رمضان است، روزه او باطل می‏باشد ولى بايد تا مغرب كارى كه روزه را باطل می‌كند انجام ندهد و بعد از ماه رمضان هم روزه آن روز را قضا نمايد.</li>
+                         <li>	اگر بچه پيش از اذان صبح ماه رمضان بالغ شود، بايد روزه بگيرد، واگر بعد از اذان بالغ شود، روزه آن روز بر او واجب نيست.</li>
+                         <li>كسى كه روزه قضا يا روزه واجب ديگرى برعهده‌ی خويش دارد، نمی‌تواند روزه مستحبى بگيرد و چنانچه فراموش كند و روزه مستحب بگيرد، در صورتى كه پيش از ظهر يادش بيايد، روزه مستحبى او به هم می‌خورد و می‌تواند نيت خود را به روزه واجب برگرداند و اگر بعد از ظهر متوجه شود، روزه او باطل است و اگر بعد از مغرب يادش بيايد روزه‏اش صحيح است، اگر چه بی‌اشكال نيست.</li>
+                         <li>	اگر غير از روزه ماه رمضان، روزه معين ديگرى بر انسان واجب باشد، مثلا نذر كرده باشد كه روز معينى را روزه بگيرد، چنانچه عمدا تا اذان صبح نيت نكند روزه‏اش باطل است و اگر نداند كه روزه آن روز بر او واجب است يا فراموش كند و پيش از ظهر يادش بيايد، چنانچه كارى كه روزه را باطل می‌كند انجام نداده باشد، روزه او صحيح و گرنه باطل می‌باشد.</li>
+                         <li>اگر براى روزه واجب غيرمعينى مثل روزه كفاره عمدا تا نزديك ظهر نيت نكند، اشكال ندارد بلكه اگر پيش از نيت تصميم داشته باشد كه روزه نگيرد يا ترديد داشته باشد كه بگيرد يا نه، چنانچه كارى كه روزه را باطل می‌كند انجام نداده باشد، و پيش از ظهر نيت كند، روزه او صحيح است.</li>
+                         <li>اگر كافری پيش از ظهر ماه رمضان مسلمان شود و حتی از اذان صبح تا آن وقت كارى كه روزه را باطل می‌كند انجام نداده باشد نمی‌تواند روزه بگيرد و قضا هم ندارد.</li>
+                         <li>اگر مريض پيش از ظهر ماه رمضان خوب شود و از اذان صبح تا آن وقت كارى كه روزه را باطل می‌كند انجام نداده باشد، بايد نيت روزه كند و آن روز را روزه بگيرد، و چنانچه بعد از ظهر خوب شود، روزه آن روز بر او واجب نيست.</li>
+                         <li>روزى را كه انسان شك دارد آخر شعبان است يا اول رمضان، واجب نيست روزه بگيرد و اگر بخواهد روزه بگيرد می‌تواند نيت روزه رمضان كند ولى اگر نيت روزه قضا و مانند آن بنمايد و چنانچه بعد معلوم شود ماه رمضان بوده، روزه‌ی آن روز جزئی از روزه‌های ماه رمضان حساب می‌شود.</li>
+                         <li>اگر روزى را كه شك دارد آخر شعبان است يا اول رمضان، به نيت روزه قضا يا روزه مستحبى و مانند آن روزه بگيرد و در بين روز بفهمد كه ماه رمضان است، بايد نيت روزه رمضان كند.</li>
+                         <li>اگر در روزه واجب معينى مثل روزه رمضان از نيت روزه گرفتن برگردد، روزه‌اش باطل است ولى چنانچه نيت كند كه چيزى را كه روزه را باطل می‌كند بجا آورد، در صورتى كه آن را انجام ندهد روزه‌اش باطل نمی‌شود.</li>
+                         <li>در روزه مستحب و روزه واجبى كه وقت آن معين نيست مثل روزه كفاره، اگر قصد كند كارى كه روزه را باطل می‌كند انجام دهد، يا مردد شود كه به جا آورد يا نه، چنانچه به جا نياورد و پيش از ظهر دوباره نيت روزه كند، روزه او صحيح است.</li>
+                     </ul>
+                    
+
+                </div>
+            </div>
+
+
+        </div>
+    </body>
+</html>
